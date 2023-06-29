@@ -12,8 +12,6 @@ addingItems.addEventListener("click", function (e) {
     let newListItem = document.createElement("li");
     let addedItem = document.getElementById("title").value;
 
-    //newListItem.textContent = addedItem;
-
     let newDivText = document.createElement("div");
     newDivText.innerHTML = document.getElementById("title").value;
 
@@ -36,45 +34,17 @@ addingItems.addEventListener("click", function (e) {
 
 Coding in here that once the user is to click the X button on that item section, it will remove the whole list item on that unordered list. */
 
-var coffee = document.getElementById("coffeePods");
-var coffeeButton = document.getElementById("coffeeDelete");
+let buttonDelete = document.querySelectorAll(".btnDelete");
 
-coffeeButton.addEventListener("click", function () {
-    coffee.remove();
-    successMessage("coffee pods");
+let iList = document.querySelector("li");
+
+buttonDelete.addEventListener("click", function() {
+    for (i = 0; i < buttonDelete.length; i++) {
+        buttonDelete(i).remove();
+    }
 })
 
-var myCereal = document.getElementById("cereal"); 
-var cerealButton = document.getElementById("btnDelCereal");
 
-cerealButton.addEventListener("click", function () {
-    myCereal.remove();
-    successMessage("cereal");
-})
-
-var mySyrup = document.getElementById("syrup");
-var syrupButton = document.getElementById("btnDelSyrup");
-
-syrupButton.addEventListener("click", function() {
-    mySyrup.remove();
-    successMessage("maple syrup");
-})
-
-var myTacquitos = document.getElementById("taquitos");
-var taquButton = document.getElementById("btnDelTaq");
-
-taquButton.addEventListener("click", function () {
-    myTacquitos.remove();
-    successMessage("taquitos");
-})
-
-var myBrats = document.getElementById("brats");
-var bratsButton = document.getElementById("btnDelBrats");
-
-bratsButton.addEventListener("click", function () {
-    myBrats.remove();
-    successMessage("brats");
-})
 
 
 var myPRolls = document.getElementById("pizzaRolls");
