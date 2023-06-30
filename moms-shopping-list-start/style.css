@@ -43,3 +43,9 @@ body {
     margin-bottom: 10px;
     text-align: center;
 }
+
+.deleteItemNow {
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+}
